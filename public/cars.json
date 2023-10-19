@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "brand_title": "MERCEDES",
+      "image": "https://i.ibb.co/CmSTLZF/marcedes.jpg"
+    },
+    {
+      "id": 2,
+      "brand_title": "B.M.W",
+      "image": "https://i.ibb.co/sHf1g7j/bmw.jpg"
+    },
+    {
+      "id": 3,
+      "brand_title": "TOYOTA",
+      "image": "https://i.ibb.co/XLjcZjV/toyota.jpg"
+    },
+    {
+      "id": 4,
+      "brand_title": "NISSAN",
+      "image": "https://i.ibb.co/PrC9LSx/nissan.jpg"
+    },
+    {
+      "id": 5,
+      "brand_title": "FORD",
+      "image": "https://i.ibb.co/4sTZPCC/ford.jpg"
+    },
+    {
+      "id": 6,
+      "brand_title": "AUDI",
+      "image": "https://i.ibb.co/QDfP5MF/audi.jpg"
+    }
+  ]
+  
+
+
+
+
