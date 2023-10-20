@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
         <div>
             <Navbar></Navbar>
-          <div className=' m-5'>
+          <div className=' relative p-10 py-40'>
             <h1 className=' text-5xl font-itim font-bold text-[#21ff06]'>
                 ABOUT US
             </h1>

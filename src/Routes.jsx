@@ -7,6 +7,8 @@ import Home from "./Pages/Home";
 import Root from "./Root";
 import AboutUs from "./Components/AboutUs";
 import SignUp from "./Pages/SignUp";
+import SignIn from "./Pages/SignIn";
+import AddCars from "./Pages/AddCars";
 
 
   const router = createBrowserRouter([
@@ -26,12 +28,16 @@ import SignUp from "./Pages/SignUp";
             element: <AboutUs></AboutUs> ,
         },
         {
+            path: "/addProduct",
+            element: <AddCars></AddCars> ,
+        },
+        {
             path: "/signUp",
             element: <SignUp></SignUp>,
         },
         {
-            path: "/",
-            element: <Home></Home>,
+            path: "/signIn",
+            element:<SignIn></SignIn>,
         }
       ]
     },

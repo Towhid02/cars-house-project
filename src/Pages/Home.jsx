@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import Brand from "../Components/Brand";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
@@ -9,8 +10,10 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <Banner></Banner>
+            <div className=" max-w-7xl mx-auto">
+            <Brand></Brand>
             <Header></Header>
-            <div className=' font-galada'>Cars World!</div>
+            </div>
             <Footer></Footer>
         </div>
     );

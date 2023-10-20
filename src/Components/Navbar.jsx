@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     const Links = <>
          <li><Link to={"/"}>Home</Link></li>
-         <li><Link to={"/addChart"}>Add Chart</Link></li>
+         <li><Link to={"/addProduct"}>Add Product</Link></li>
+         <li><Link to={"/myChart"}>My Chart</Link></li>
          <li><Link to={"/aboutUs"}>About Us</Link></li>
          <li><Link to={"/signUp"}>Sign Up</Link></li>
     </>
     return (
-        <div className=" absolute z-10 w-full  border-2 rounded-lg">
+        <div className=" absolute z-10 w-full  border-2 rounded-lg px-10 py-2">
             <div className="navbar navbar-expand-lg navbar-dark shadow-5-strong rounded-lg">
   <div className="navbar-start">
     <div className="dropdown">
@@ -28,7 +29,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Sign In</a>
+    <a className="btn"><Link to={"/signIn"}>Sign In</Link></a>
   </div>
 </div>
         </div>
