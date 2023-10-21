@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -64,26 +65,26 @@ const SignUp = () => {
             <div className="hero min-h-screen bg-base-200 ">
   <div className="hero-content flex-col ">
     <div className="text-center ">
-      <h1 className="text-5xl font-bold">Sign Up now!</h1>
+      <h1 className="text-5xl font-bold font-mooli">Sign Up now!</h1>
       
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form className="card-body" onSubmit={handleSignUp}>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text font-itim">Name</span>
           </label>
           <input type="text" name="name" placeholder="name" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text font-itim">Email</span>
           </label>
           <input type="email" name="email" placeholder="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text font-itim">Password</span>
           </label>
           <input type={show ? "text" :"password" } 
           name="password" placeholder="new password" 
@@ -101,17 +102,21 @@ const SignUp = () => {
           <button className="btn btn-primary">Sign up</button>
         </div>
       </form>
-      <p>OR</p>
+      <p className=" font-itim">OR</p>
       <div className="form-control mt-6">
           <button className="btn btn-primary">Google</button>
         </div>
+        <div className="form-control mt-6">
+         <p className=" font-itim">Don't have account <button className="btn btn-link"><Link to={'/signIn'}>Sign In</Link></button></p>
+        </div>
         {
-    setRegisterError && <p>{registerError}</p>
-   }
-    {
+        setRegisterError && <p>{registerError}</p>
+        }
+        {
         success && <p className="text-green-700">{success}</p>
-      }
+        }
     </div>
+    
   </div>
 </div>
 <Footer></Footer>
