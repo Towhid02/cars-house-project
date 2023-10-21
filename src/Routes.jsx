@@ -13,7 +13,8 @@ import Product from "./Pages/Product";
 // import Error from "./Pages/Error";
 import AllCars from "./Pages/AllCars";
 import UpdateCars from "./Pages/UpdateCars";
-import PrivateRoutes from "./Components/PrivateRoutes";
+// import PrivateRoutes from "./Components/PrivateRoutes";
+import Details from "./Pages/Details";
 
 
   const router = createBrowserRouter([
@@ -26,7 +27,7 @@ import PrivateRoutes from "./Components/PrivateRoutes";
         {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch('cars.json'),
+            loader: () => fetch('http://localhost:5000/brands/'),
 
         },
         {
@@ -35,17 +36,17 @@ import PrivateRoutes from "./Components/PrivateRoutes";
         },
         {
             path: "/addProduct",
-            element: <PrivateRoutes><AddCars></AddCars></PrivateRoutes> ,
+            element: <AddCars></AddCars> ,
         },
         {
             path: "/allCars",
-            element: <PrivateRoutes><AllCars></AllCars></PrivateRoutes> ,
+            element: <AllCars></AllCars> ,
             loader: () => fetch('http://localhost:5000/cars/'),
 
         },
         {
           path: "/updateCar/:id",
-          element: <PrivateRoutes><UpdateCars></UpdateCars></PrivateRoutes> ,
+          element: <UpdateCars></UpdateCars>,
           loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
       },
         {
@@ -53,9 +54,17 @@ import PrivateRoutes from "./Components/PrivateRoutes";
             element: <SignUp></SignUp>,
         },
         {
-            path: "/product",
+            path: "/brand/:brand",
             element: <Product></Product>,
+            loader: ({params}) => fetch(`http://localhost:5000/brand/${params.brand}/`)
             
+
+            
+        },
+        {
+            path: "/details/:id",
+            element:<Details></Details>,
+            loader: () => fetch('http://localhost:5000/cars/'),
         },
         {
             path: "/signIn",

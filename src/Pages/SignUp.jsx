@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { FaGoogle} from 'react-icons/fa';
+import {  BiShow } from 'react-icons/bi';
 
 
 const SignUp = () => {
@@ -23,20 +25,20 @@ const SignUp = () => {
     const name = form.name.value
     const email = form.email.value
     const password = form.password.value
-    const accepted = e.target.terms.checked;
+    // const accepted = e.target.terms.checked;
     console.log(name, email, password );
-    if (password.length < 6) {
-      setRegisterError('Password at least 6 characters');
-      return;
-  }
-  else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
-      setRegisterError('Password must be have an uppercase or special letter')
-      return;
-  }
-  else if(!accepted){
-      setRegisterError('Please accept our terms & condition')
-      return;
-  }
+  //   if (password.length < 6) {
+  //     setRegisterError('Password at least 6 characters');
+  //     return;
+  // }
+  // else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
+  //     setRegisterError('Password must be have an uppercase or special letter')
+  //     return;
+  // }
+  // else if(!accepted){
+  //     setRegisterError('Please accept our terms & condition')
+  //     return;
+  // }
 
     setRegisterError('')
     setSuccess('');
@@ -62,7 +64,7 @@ const SignUp = () => {
     return (
         <div>
           <Navbar></Navbar>
-            <div className="hero min-h-screen bg-base-200 ">
+            <div className="hero  min-h-screen bg-base-200" style={{backgroundImage: 'url(../../public/images/back6.jpg)'}}>
   <div className="hero-content flex-col ">
     <div className="text-center ">
       <h1 className="text-5xl font-bold font-mooli">Sign Up now!</h1>
@@ -89,7 +91,7 @@ const SignUp = () => {
           <input type={show ? "text" :"password" } 
           name="password" placeholder="new password" 
           className="input input-bordered" required />
-          <span onClick={() => setShow(!show)}>Show</span>
+          <span className="btn" onClick={() => setShow(!show)}><BiShow></BiShow> Show</span>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -104,7 +106,7 @@ const SignUp = () => {
       </form>
       <p className=" font-itim">OR</p>
       <div className="form-control mt-6">
-          <button className="btn btn-primary">Google</button>
+          <button className="btn btn-primary"><FaGoogle></FaGoogle>Google</button>
         </div>
         <div className="form-control mt-6">
          <p className=" font-itim">Don't have account <button className="btn btn-link"><Link to={'/signIn'}>Sign In</Link></button></p>

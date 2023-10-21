@@ -22,7 +22,7 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
-    const signInWithGoogle =(value) =>{
+    const signInWithGoogle =() =>{
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }

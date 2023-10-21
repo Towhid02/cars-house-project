@@ -18,7 +18,7 @@ const Brand = () => {
             <div className=" grid grid-cols-3 gap-10   justify-center items-center text-center my-10" >
             {
                 brands.map(brand => 
-                <BrandCard key={brand.id}
+                <BrandCard key={brand?.id}
                 brands={brand}
                 >
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../public/images/bannner2.jpg"
 
 const Banner = () => {
@@ -12,7 +13,9 @@ const Banner = () => {
       <p className='mb-5'>
           Car House is a family-owned and operated car dealership in Chattogram, Bangladesh. We have been serving the community for over five years, and we are proud to be your one-stop shop for all your automotive needs.
             </p>
-      
+      <div>
+        <button className="btn"><Link to={"/allCars"}>EXPLORE</Link></button>
+      </div>
     </div>
   </div>
 </div>

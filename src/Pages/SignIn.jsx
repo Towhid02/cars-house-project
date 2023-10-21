@@ -22,7 +22,6 @@ const SignIn = () => {
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        const accepted = e.target.terms.checked;
         console.log( email, password );
         signIn( email, password )
         .then(result => {
@@ -33,10 +32,6 @@ const SignIn = () => {
           }
           else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
               setRegisterError('Password must be have an uppercase or special letter')
-              return;
-          }
-          else if(!accepted){
-              setRegisterError('Please accept our terms & condition')
               return;
           }
           setRegisterError('')
@@ -55,7 +50,7 @@ const SignIn = () => {
     return (
         <div>
           <Navbar></Navbar>
-             <div className="hero min-h-screen bg-base-200">
+             <div className="hero min-h-screen bg-base-200 p-10" style={{backgroundImage: 'url(../../public/images/back6.jpg)'}}>
   <div className="hero-content flex-col ">
     <div className="text-center ">
       <h1 className="text-5xl font-bold font-mooli">Sign In now!</h1>

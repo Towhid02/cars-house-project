@@ -21,10 +21,10 @@ const UpdateCars = () => {
         const price = form.price.value;
         const image = form.image.value;
 
-        const updatedCar = { name, brand, model, type, rating, price, image }
+        const updatedCar = {  name, brand, model, type, rating, price, image }
 
         console.log(updatedCar);
-        fetch(`http://localhost:5000/car/${_id}`, {
+        fetch(`http://localhost:5000/cars/${car._id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'

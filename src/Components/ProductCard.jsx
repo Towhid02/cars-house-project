@@ -44,17 +44,25 @@ const ProductCard = ({car, cars, setCars}) => {
     }
     return (
         <div>
-            <div className="card card-compact  bg-base-100 shadow-xl">
+            <div className="card card-compact  bg-base-100 shadow-xl " style={{backgroundImage:'url(../../public/images/back5.jpg)'}}>
   <figure><img className=" container w-full h-60" src={image} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{brand}</h2>
-    <h2 className="card-title">{model}</h2>
-    <p>{type}</p>
-    <p>{price} Tk</p>
+    <h2 className="card-title text-3xl text-[#51060b] font-bold font-itim">{brand}</h2>
+    <h2 className="card-title text-[#3f5efb] font-itim">Model: {model}</h2>
+    
+    <p className="card-title text-[#000851] font-itim"> Type: {type}</p>
+    <div className="rating rating-sm">
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" checked />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
+  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
+</div>
+    <p className="card-title text-[#182848] font-itim">Price: {price} Tk</p>
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Details</button>
       
-      <button className="btn btn-primary"><Link to={`updateCar/${_id}`}>Update</Link></button>
+      <button className="btn btn-primary"><Link to={`/cars/${_id}`}>Update</Link></button>
       
       
       <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>
@@ -68,3 +76,8 @@ const ProductCard = ({car, cars, setCars}) => {
 };
 
 export default ProductCard;
+// background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); #00c9ff
+// background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%); #000851
+// background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%); #3f5efb
+// background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); #182848
+// background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import nav from "../../public/images/nav.png"
+
 
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider";
@@ -11,7 +11,6 @@ const Navbar = () => {
     const Links = <>
          <li><Link to={"/"}>Home</Link></li>
          <li><Link to={"/addProduct"}>Add Product</Link></li>
-         <li><Link to={"/allCars"}>All Vehicles</Link></li>
          <li><Link to={"/aboutUs"}>About Us</Link></li>
          <li><Link to={"/signUp"}>Sign Up</Link></li>
     </>
