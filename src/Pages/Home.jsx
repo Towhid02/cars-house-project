@@ -1,5 +1,6 @@
 import Banner from "../Components/Banner";
 import Brand from "../Components/Brand";
+import Choose from "../Components/Choose";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
@@ -13,6 +14,7 @@ const Home = () => {
             <div className=" max-w-7xl mx-auto">
             <Brand></Brand>
             <Header></Header>
+            <Choose></Choose>
             </div>
             <Footer></Footer>
         </div>
