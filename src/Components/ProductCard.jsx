@@ -62,7 +62,7 @@ const ProductCard = ({car, cars, setCars}) => {
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Details</button>
       
-      <button className="btn btn-primary"><Link to={`/cars/${_id}`}>Update</Link></button>
+      <button className="btn btn-primary"><Link to={`/updateCar/${_id}`}>Update</Link></button>
       
       
       <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>

@@ -23,22 +23,25 @@ const SignIn = () => {
         const email = form.email.value
         const password = form.password.value
         console.log( email, password );
+      //   if (password.length < 6) {
+      //     setRegisterError('Password at least 6 characters');
+      //     return;
+      // }
+      // else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
+      //     setRegisterError('Password must be have an uppercase or special letter')
+      //     return;
+          
+      // }
         signIn( email, password )
         .then(result => {
             console.log(result.user);
-            if (password.length < 6) {
-              setRegisterError('Password at least 6 characters');
-              return;
-          }
-          else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
-              setRegisterError('Password must be have an uppercase or special letter')
-              return;
-          }
-          setRegisterError('')
+            setRegisterError('')
           setSuccess('');
 
           setUser(result.user)
           navigate("/")
+          
+          
 
         })
         .catch(error => {

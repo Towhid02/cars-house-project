@@ -27,7 +27,7 @@ const BrandsCard = ({singleBrand}) => {
 </div>
     <p className="font-itim">Discover the power of innovation and the thrill of the road with our latest lineup of cutting-edge vehicles. </p>
     <div className="card-actions">
-      <button className="btn btn-primary font-itim"><Link to={`details/${_id}`}>DETAILS</Link></button>
+      <button className="btn btn-primary font-itim"><Link to={`/details/${_id}`}>DETAILS</Link></button>
     </div>
   </div>
 </div>

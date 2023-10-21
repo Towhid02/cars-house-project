@@ -15,9 +15,23 @@ const SignUp = () => {
   const [success, setSuccess] = useState('')
     const [show, setShow] = useState('')
 
-  const { createUser, setUser } = useContext(AuthContext)
+  const { createUser, setUser, signInWithGoogle } = useContext(AuthContext)
   
   const navigate = useNavigate()
+
+  const handleGoogleSignIN =  () => {
+    console.log("clicked");
+    signInWithGoogle()
+    .then( result => {
+      console.log(result.user);
+      setUser(result.user)
+      navigate("/")  
+    })
+    .catch(error =>{
+           console.error(error);
+         })
+
+   }
 
   const handleSignUp = e =>{
     e.preventDefault();
@@ -43,7 +57,7 @@ const SignUp = () => {
     setRegisterError('')
     setSuccess('');
 
-    createUser( name, email, password )
+    createUser( email, password )
     .then(result => {
         console.log(result.user);
         setUser(result.user)
@@ -106,7 +120,7 @@ const SignUp = () => {
       </form>
       <p className=" font-itim">OR</p>
       <div className="form-control mt-6">
-          <button className="btn btn-primary"><FaGoogle></FaGoogle>Google</button>
+          <button className="btn btn-primary" onClick={handleGoogleSignIN}><FaGoogle></FaGoogle>Google</button>
         </div>
         <div className="form-control mt-6">
          <p className=" font-itim">Don't have account <button className="btn btn-link"><Link to={'/signIn'}>Sign In</Link></button></p>
