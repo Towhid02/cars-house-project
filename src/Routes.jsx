@@ -13,6 +13,7 @@ import Product from "./Pages/Product";
 // import Error from "./Pages/Error";
 import AllCars from "./Pages/AllCars";
 import UpdateCars from "./Pages/UpdateCars";
+import PrivateRoutes from "./Components/PrivateRoutes";
 
 
   const router = createBrowserRouter([
@@ -34,17 +35,17 @@ import UpdateCars from "./Pages/UpdateCars";
         },
         {
             path: "/addProduct",
-            element: <AddCars></AddCars> ,
+            element: <PrivateRoutes><AddCars></AddCars></PrivateRoutes> ,
         },
         {
             path: "/allCars",
-            element: <AllCars></AllCars> ,
+            element: <PrivateRoutes><AllCars></AllCars></PrivateRoutes> ,
             loader: () => fetch('http://localhost:5000/cars/'),
 
         },
         {
           path: "/updateCar/:id",
-          element: <UpdateCars></UpdateCars> ,
+          element: <PrivateRoutes><UpdateCars></UpdateCars></PrivateRoutes> ,
           loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
       },
         {

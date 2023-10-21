@@ -2,9 +2,11 @@ import { useLoaderData } from "react-router-dom";
 import ProductCard from "../Components/ProductCard";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useState } from "react";
 
 const AllCars = () => {
-    const cars = useLoaderData()
+    const loadedCars = useLoaderData()
+    const [cars, setCars] = useState(loadedCars)
     return (
         <div>
             <Navbar></Navbar>
@@ -15,6 +17,8 @@ const AllCars = () => {
             cars.map(car=> <ProductCard 
             key={car._id}
             car={car}
+            cars={cars}
+            setCars={setCars}
             ></ProductCard>)
         }
         </div>

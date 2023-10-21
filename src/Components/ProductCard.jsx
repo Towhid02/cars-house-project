@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const ProductCard = ({car}) => {
+const ProductCard = ({car, cars, setCars}) => {
     const {_id, brand, model, type, image, price} = car;
     const handleDelete = _id =>{
         console.log(_id);
@@ -33,6 +33,8 @@ const ProductCard = ({car}) => {
                                 'Your file has been deleted.',
                                 'success'
                               )
+                      const remaining = cars.filter(ca => ca._id !== _id) ;  
+                      setCars(remaining)  
                     }
                 })
             // 

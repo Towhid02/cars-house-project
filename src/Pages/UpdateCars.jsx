@@ -24,7 +24,7 @@ const UpdateCars = () => {
         const updatedCar = { name, brand, model, type, rating, price, image }
 
         console.log(updatedCar);
-        fetch(`http://localhost:5000/cars/${_id}`, {
+        fetch(`http://localhost:5000/car/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
@@ -34,7 +34,7 @@ const UpdateCars = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount > 0){
                 Swal.fire({
                     title: 'Success!',
                     text: 'Car Updated Successfully',

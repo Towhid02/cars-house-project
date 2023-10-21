@@ -28,8 +28,8 @@ const SignUp = () => {
       setRegisterError('Password at least 6 characters');
       return;
   }
-  else if(!/[A-Z]/.test(password)){
-      setRegisterError('Password must be have an uppercase')
+  else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
+      setRegisterError('Password must be have an uppercase or special letter')
       return;
   }
   else if(!accepted){
