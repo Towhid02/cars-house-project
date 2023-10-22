@@ -15,6 +15,7 @@ import AllCars from "./Pages/AllCars";
 import UpdateCars from "./Pages/UpdateCars";
 import PrivateRoutes from "./Components/PrivateRoutes";
 import Details from "./Pages/Details";
+import AddCarts from "./Pages/AddCarts";
 
 
   const router = createBrowserRouter([
@@ -52,6 +53,10 @@ import Details from "./Pages/Details";
         {
             path: "/signUp",
             element: <SignUp></SignUp>,
+        },
+        {
+            path: "/addCarts",
+            element: <AddCarts></AddCarts>,
         },
         {
             path: "/brand/:brand",

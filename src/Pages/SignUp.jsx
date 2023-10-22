@@ -39,20 +39,20 @@ const SignUp = () => {
     const name = form.name.value
     const email = form.email.value
     const password = form.password.value
-    // const accepted = e.target.terms.checked;
+    const accepted = e.target.terms.checked;
     console.log(name, email, password );
-  //   if (password.length < 6) {
-  //     setRegisterError('Password at least 6 characters');
-  //     return;
-  // }
-  // else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
-  //     setRegisterError('Password must be have an uppercase or special letter')
-  //     return;
-  // }
-  // else if(!accepted){
-  //     setRegisterError('Please accept our terms & condition')
-  //     return;
-  // }
+    if (password.length < 6) {
+      setRegisterError('Password at least 6 characters');
+      return;
+  }
+  else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
+      setRegisterError('Password must be have an uppercase or special letter')
+      return;
+  }
+  else if(!accepted){
+      setRegisterError('Please accept our terms & condition')
+      return;
+  }
 
     setRegisterError('')
     setSuccess('');

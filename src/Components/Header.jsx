@@ -6,7 +6,7 @@ import toyota from "../../public/images/toyota-slider.jpg"
 const Header = () => {
     return (
         <div>
-        <div className="carousel w-full rounded-2xl">
+        <div className="carousel w-full rounded-2xl my-2">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={benz}className="w-full brightness-50 opacity-95"  />
     <div  className=" absolute  p-5 md:p-24 lg:p-60 ">

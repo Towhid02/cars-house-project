@@ -13,7 +13,7 @@ const Brand = () => {
    
     return (
         <div>
-        <div className="p-10 "style={{backgroundImage:'url(../../public/images/back7.avif)'}} >
+        <div className="p-10 rounded-xl my-2"style={{backgroundImage:'url(../../public/images/back7.avif)'}} >
             <h1 className=" text-center text-6xl font-grand font-bold">Our Brands</h1>
          
             <div className=" grid grid-cols-2  md:grid-cols-3 gap-5 text-center my-10"  data-aos="fade-up"

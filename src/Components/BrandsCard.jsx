@@ -9,14 +9,17 @@ const BrandsCard = ({singleBrand}) => {
     return (
         <div>
             <h1>{}</h1>
-            <div className="card bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-    <img src={image}alt="Shoes" className="rounded-xl w-72 h-60" />
+            <div className="card bg-base-100 shadow-xl"  data-aos="fade-up"
+     data-aos-anchor-placement="center-center">
+  <figure className=" pt-10">
+    <img src={image}alt="Shoes" className="rounded-xl w-full " />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title text-5xl font-itim">{brand}</h2>
-    <h2 className="card-title font-itim">Model: {model}</h2>
-    <h2 className="card-title font-itim">Type:  {type}</h2>
+    <h2 className="card-title text-2xl md:text-5xl font-itim">{brand}</h2>
+    <div className="flex gap-5">
+    <h2 className=" font-mooli">Model: {model}</h2>
+    <h2 className=" font-mooli">Type:  {type}</h2>
+    </div>
     <h2 className="card-title font-itim">Price: {price} TK </h2>
     <div className="rating rating-sm">
   <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />

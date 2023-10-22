@@ -2,20 +2,18 @@ import Banner from "../Components/Banner";
 import Brand from "../Components/Brand";
 import Choose from "../Components/Choose";
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
+import Services from "../Components/Services";
 
 
 const Home = () => {
     return (
-        <div className=" my-5">
+        <div className=" my-2">
             <Navbar></Navbar>
-            <Banner></Banner>
-            <div className=" max-w-7xl mx-auto">
+            <Banner></Banner>           
             <Brand></Brand>
-            <Header></Header>
             <Choose></Choose>
-            </div>
+            <Services></Services>          
             <Footer></Footer>
         </div>
     );

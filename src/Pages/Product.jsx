@@ -16,7 +16,7 @@ const Product = () => {
             <Navbar></Navbar>
             <Header></Header>
             
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 rounded-xl p-8" style={{backgroundImage:'url(../../public/images/back11.avif)'}}>
            {
                  brandsName.map(singleBrand => <BrandsCard
                  key={singleBrand.id}
