@@ -1,4 +1,7 @@
+
 import Swal from 'sweetalert2'
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const AddCars = () => {
 
@@ -40,14 +43,16 @@ const AddCars = () => {
         }
 
     return (
-        <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-3xl font-extrabold">Add a Car</h2>
+        <div>
+           <Navbar></Navbar>
+        <div className="bg-[#F4F3F0] p-10 md:p-24 rounded-3xl my-8" style={{backgroundImage: 'url(/public/images/back8.avif)'}}>
+            <h2 className="text-3xl font-extrabold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 font-mooli">ADD CAR</h2>
             <form onSubmit={handleAddCars}>
               
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text"> Name</span>
+                            <span className="label-text text-xl font-mooli"> Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -57,7 +62,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Brand Name</span>
+                            <span className="label-text text-xl font-mooli">Brand Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -70,7 +75,7 @@ const AddCars = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Model</span>
+                            <span className="label-text text-xl font-mooli">Model</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -81,7 +86,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Type</span>
+                            <span className="label-text text-xl font-mooli">Type</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -94,7 +99,7 @@ const AddCars = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Rating</span>
+                            <span className="label-text text-xl font-mooli">Rating</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="rating" 
@@ -104,7 +109,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text text-xl font-mooli">Price</span>
                         </label>
                         <label className="input-group">
                             <input type="number" name="price" placeholder="Price" className="input input-bordered w-full" />
@@ -115,16 +120,18 @@ const AddCars = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">image URL</span>
+                            <span className="label-text text-xl font-mooli">image URL</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="image" placeholder="image URL" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Car" className="btn btn-block" />
+                <input type="submit" value="Add Car" className="btn text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 btn-block" />
 
             </form>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import { FaGoogle} from 'react-icons/fa';
+// import { FaGoogle} from 'react-icons/fa';
 import {  BiShow } from 'react-icons/bi';
 
 
@@ -84,13 +84,13 @@ const SignUp = () => {
       <h1 className="text-5xl font-bold font-mooli">Sign Up now!</h1>
       
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full bg-base-100 max-w-lg shadow-2xl">
       <form className="card-body" onSubmit={handleSignUp}>
         <div className="form-control">
           <label className="label">
             <span className="label-text font-itim">Name</span>
           </label>
-          <input type="text" name="name" placeholder="name" className="input input-bordered" required />
+          <input type="text" name="name" placeholder="name" className=" input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -115,15 +115,17 @@ const SignUp = () => {
          </div>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sign up</button>
+        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+  <span className="relative px-5 py-2.5 transition-all ease-in duration-75  dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">Sign up</span></button>
         </div>
-      </form>
-      <p className=" font-itim">OR</p>
-      <div className="form-control mt-6">
-          <button className="btn btn-primary" onClick={handleGoogleSignIN}><FaGoogle></FaGoogle>Google</button>
+        <div className="form-control mt-4 mx-12">
+      <button type="button" className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-xm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2" onClick={handleGoogleSignIN}><svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 19">
+    <path fillRule="evenodd" d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z" clipRule="evenodd"/>
+  </svg>
+  Sign up with Google</button>
         </div>
         <div className="form-control mt-6">
-         <p className=" font-itim">Don't have account <button className="btn btn-link"><Link to={'/signIn'}>Sign In</Link></button></p>
+         <p className=" font-itim text-xl">Already have account <button className="btn btn-link text-xl"><Link to={'/signIn'}>Sign In</Link></button></p>
         </div>
         {
         setRegisterError && <p>{registerError}</p>
@@ -131,8 +133,11 @@ const SignUp = () => {
         {
         success && <p className="text-green-700">{success}</p>
         }
+      </form>
+      
+       
     </div>
-    
+
   </div>
 </div>
 <Footer></Footer>

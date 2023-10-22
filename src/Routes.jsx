@@ -10,10 +10,10 @@ import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
 import AddCars from "./Pages/AddCars";
 import Product from "./Pages/Product";
-// import Error from "./Pages/Error";
+import Error from "./Pages/Error";
 import AllCars from "./Pages/AllCars";
 import UpdateCars from "./Pages/UpdateCars";
-// import PrivateRoutes from "./Components/PrivateRoutes";
+import PrivateRoutes from "./Components/PrivateRoutes";
 import Details from "./Pages/Details";
 
 
@@ -21,7 +21,7 @@ import Details from "./Pages/Details";
     {
       path: "/",
       element: <Root></Root>,
-      // errorElement: <Error></Error>,
+      errorElement: <Error></Error>,
       loader: () => fetch('cars.json'),
       children:[
         {
@@ -36,17 +36,17 @@ import Details from "./Pages/Details";
         },
         {
             path: "/addProduct",
-            element: <AddCars></AddCars> ,
+            element:<PrivateRoutes><AddCars></AddCars></PrivateRoutes>  ,
         },
         {
             path: "/allCars",
-            element: <AllCars></AllCars> ,
+            element: <PrivateRoutes><AllCars></AllCars></PrivateRoutes> ,
             loader: () => fetch('http://localhost:5000/cars/'),
 
         },
         {
           path: "/updateCar/:id",
-          element: <UpdateCars></UpdateCars>,
+          element:<PrivateRoutes><UpdateCars></UpdateCars></PrivateRoutes>,
           loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
       },
         {
@@ -55,7 +55,7 @@ import Details from "./Pages/Details";
         },
         {
             path: "/brand/:brand",
-            element: <Product></Product>,
+            element: <PrivateRoutes><Product></Product></PrivateRoutes>,
             loader: ({params}) => fetch(`http://localhost:5000/brand/${params.brand}/`)
             
 
@@ -63,8 +63,8 @@ import Details from "./Pages/Details";
         },
         {
             path: "/details/:id",
-            element:<Details></Details>,
-            loader: () => fetch('http://localhost:5000/cars/'),
+            element:<PrivateRoutes><Details></Details></PrivateRoutes> ,
+            loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
         },
         {
             path: "/signIn",
