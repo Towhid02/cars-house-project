@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider";
 import Swal from "sweetalert2";
@@ -11,7 +12,7 @@ const AddCarts = (data) => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/carts/${user.email}`)
+      fetch(`https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/carts/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

@@ -23,7 +23,7 @@ const Details = () => {
 
       }
       console.log(data);
-      fetch('http://localhost:5000/carts', {
+      fetch('https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/carts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -28,7 +28,7 @@ import AddCarts from "./Pages/AddCarts";
         {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/brands/'),
+            loader: () => fetch('https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/brands/'),
 
         },
         {
@@ -42,13 +42,13 @@ import AddCarts from "./Pages/AddCarts";
         {
             path: "/allCars",
             element: <PrivateRoutes><AllCars></AllCars></PrivateRoutes> ,
-            loader: () => fetch('http://localhost:5000/cars/'),
+            loader: () => fetch('https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/cars/'),
 
         },
         {
           path: "/updateCar/:id",
           element:<PrivateRoutes><UpdateCars></UpdateCars></PrivateRoutes>,
-          loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
+          loader: ({params}) => fetch(`https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/cars/${params.id}/`)
       },
         {
             path: "/signUp",
@@ -61,7 +61,7 @@ import AddCarts from "./Pages/AddCarts";
         {
             path: "/brand/:brand",
             element: <PrivateRoutes><Product></Product></PrivateRoutes>,
-            loader: ({params}) => fetch(`http://localhost:5000/brand/${params.brand}/`)
+            loader: ({params}) => fetch(`https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/brand/${params.brand}/`)
             
 
             
@@ -69,7 +69,7 @@ import AddCarts from "./Pages/AddCarts";
         {
             path: "/details/:id",
             element:<PrivateRoutes><Details></Details></PrivateRoutes> ,
-            loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}/`)
+            loader: ({params}) => fetch(`https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/cars/${params.id}/`)
         },
         {
             path: "/signIn",

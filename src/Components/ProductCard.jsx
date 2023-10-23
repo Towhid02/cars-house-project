@@ -21,7 +21,7 @@ const ProductCard = ({car, cars, setCars}) => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cars/${_id}`, {
+                fetch(`https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/cars/${_id}`, {
                     method: 'DELETE'
                 })
                 .then (res => res.json())
