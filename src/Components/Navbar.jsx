@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider";
 
@@ -16,7 +17,7 @@ const Navbar = () => {
          <li><Link to={"/signUp"}>Sign Up</Link></li>
     </>
     return (
-        <div className="  w-full   border-2 rounded-3xl px-10 py-2" style={{backgroundImage:'url(../../public/images/nav.png)'}}>
+        <div className="  w-full   border-2 rounded-3xl px-10 py-2 bg-navBg" >
          
             <div className="navbar navbar-expand-lg navbar-dark shadow-5-strong rounded-lg">
               
@@ -29,7 +30,7 @@ const Navbar = () => {
        {Links}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-[#aefb2a] text-2xl font-galada">Cars_World</a>
+    <a className="btn btn-ghost normal-case text-[#aefb2a] text-xl md:text-4xl font-galada">Cars_World</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-black ">

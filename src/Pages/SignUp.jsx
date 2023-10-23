@@ -78,7 +78,7 @@ const SignUp = () => {
     return (
         <div>
           <Navbar></Navbar>
-            <div className="hero  min-h-screen bg-base-200" style={{backgroundImage: 'url(../../public/images/back6.jpg)'}}>
+            <div className="hero  min-h-screen bg-base-200" style={{backgroundImage: 'url(../assets/back6.jpg)'}}>
   <div className="hero-content flex-col ">
     <div className="text-center ">
       <h1 className="text-5xl font-bold font-mooli">Sign Up now!</h1>

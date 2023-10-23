@@ -44,7 +44,7 @@ const ProductCard = ({car, cars, setCars}) => {
     }
     return (
         <div>
-            <div className="card card-compact  bg-base-100 shadow-xl " style={{backgroundImage:'url(../../public/images/back5.jpg)'}}>
+            <div className="card card-compact  bg-base-100 shadow-xl bg-productCartBg" >
   <figure><img className=" container w-full h-60" src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title text-3xl text-[#51060b] font-bold font-itim">{brand}</h2>

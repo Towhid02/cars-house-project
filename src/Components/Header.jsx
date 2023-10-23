@@ -1,7 +1,7 @@
-import audi from "../../public/images/audi1.jpg"
-import bmw from "../../public/images/bmw1.jpg"
-import benz from "../../public/images/benz.jpg"
-import toyota from "../../public/images/toyota-slider.jpg"
+import audi from "../assets/audi1.jpg"
+import bmw from "../assets/bmw1.jpg"
+import benz from "../assets/benz.jpg"
+import toyota from "../assets/toyota-slider.jpg"
 
 const Header = () => {
     return (

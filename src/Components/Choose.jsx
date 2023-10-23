@@ -3,12 +3,12 @@
 const Choose = () => {
     return (
         <div  >
-            <div className="hero rounded-xl my-2" style={{backgroundImage: 'url(../../public/images/back.jpg)'}}>
+            <div className="hero rounded-xl my-2 bg-chooseBg" >
   <div className="hero-overlay bg-opacity-50"></div>
   <div className="justify-center items-center text-center py-10 px-5" data-aos="fade-up"
      data-aos-anchor-placement="center-bottom">
     <div className="max-w-md" >
-      <h1 className="mb-5 text-xl md:text-5xl font-bold font-itim">Why You Choose us</h1>
+      <h1 className="mb-5 text-xl md:text-5xl font-bold font-itim text-blue-700">Why You Choose us</h1>
       <p className="mb-5 font-mooli text-white" >There are many reasons why you might choose our car shop. Here are just a few : 
 <ul >
     <li>Expert mechanics </li>

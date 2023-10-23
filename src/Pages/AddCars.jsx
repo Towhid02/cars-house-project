@@ -21,7 +21,7 @@ const AddCars = () => {
             const newCar = { name, brand, model, type, rating, price,image }
     
             console.log(newCar);
-            fetch('https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app//cars', {
+            fetch('https://cars-world-server-6zjoi6jd9-md-towhidul-islams-projects.vercel.app/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,14 +45,14 @@ const AddCars = () => {
     return (
         <div>
            <Navbar></Navbar>
-        <div className="bg-[#F4F3F0] p-10 md:p-24 rounded-3xl my-8" style={{backgroundImage: 'url(/public/images/back8.avif)'}}>
-            <h2 className="text-3xl font-extrabold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 font-mooli">ADD CAR</h2>
+        <div className="bg-[#F4F3F0] p-10 md:p-24 rounded-3xl my-8 bg-addCarBg" >
+            <h2 className="text-3xl font-extrabold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 font-mooli">ADD CARS</h2>
             <form onSubmit={handleAddCars}>
               
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli"> Name</span>
+                            <span className="label-text text-xl font-mooli text-white"> Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -62,7 +62,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">Brand Name</span>
+                            <span className="label-text text-xl font-mooli text-white">Brand Name</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -75,7 +75,7 @@ const AddCars = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">Model</span>
+                            <span className="label-text text-xl font-mooli text-white">Model</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -86,7 +86,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">Type</span>
+                            <span className="label-text text-xl font-mooli text-white">Type</span>
                         </label>
                         <label className="input-group">
                             <input type="text" 
@@ -99,7 +99,7 @@ const AddCars = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">Rating</span>
+                            <span className="label-text text-xl font-mooli text-white">Rating</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="rating" 
@@ -109,7 +109,7 @@ const AddCars = () => {
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">Price</span>
+                            <span className="label-text text-xl font-mooli text-white">Price</span>
                         </label>
                         <label className="input-group">
                             <input type="number" name="price" placeholder="Price" className="input input-bordered w-full" />
@@ -120,7 +120,7 @@ const AddCars = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text text-xl font-mooli">image URL</span>
+                            <span className="label-text text-xl font-mooli text-white">image URL</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="image" placeholder="image URL" className="input input-bordered w-full" />

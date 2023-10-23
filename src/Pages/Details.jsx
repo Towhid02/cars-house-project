@@ -49,12 +49,12 @@ const Details = () => {
     return (
         <div>
             <Navbar></Navbar>
-           <div className="card glass bg-[]" style={{backgroundImage: 'url(/public/images/back5.jpg)'}}>
+           <div className="card glass bg-detailBg" >
   <figure><img className=" rounded-lg shadow-2xl" src={image} alt="car!"/></figure>
   <div className="card-body" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-    <h2 className="card-title text-[#046C4E] text-2xl md:text-5xl font-itim">{brand} Automobile</h2>
+    <h2 className="card-title text-[#046C4E] text-3xl md:text-5xl font-itim">{brand} Automobile</h2>
     <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli ">Model : {model}-series-2022</h2>
     <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli">Type  : {type} & Four Wheeler</h2>
     <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli"> Price : {price} Tk </h2>
@@ -65,7 +65,7 @@ const Details = () => {
   <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
   <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" checked />
 </div>
-    <p className="font-itim text-blue-800 text-justify">This type of car that combines the features of a passenger car with those of an off-road vehicle. SUVs are typically larger and heavier than cars, and they have higher ground clearance, which makes them better suited for driving over rough terrain. Many SUVs also have four-wheel drive or all-wheel drive, which gives them even more traction in slippery or challenging conditions.</p>
+    <p className="font-itim text-blue-800 text-xl text-justify">This type of car that combines the features of a passenger car with those of an off-road vehicle. SUVs are typically larger and heavier than cars, and they have higher ground clearance, which makes them better suited for driving over rough terrain. Many SUVs also have four-wheel drive or all-wheel drive, which gives them even more traction in slippery or challenging conditions.</p>
   </div>
   <div className="">
   <button type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2"><Link to={`/updateCar/${_id}`}>Update</Link></button>
