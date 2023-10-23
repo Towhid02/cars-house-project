@@ -60,7 +60,7 @@ const AddCars = () => {
                             className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text text-xl font-mooli text-white">Brand Name</span>
                         </label>
@@ -84,7 +84,7 @@ const AddCars = () => {
                             className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text text-xl font-mooli text-white">Type</span>
                         </label>
@@ -107,7 +107,7 @@ const AddCars = () => {
                             className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text text-xl font-mooli text-white">Price</span>
                         </label>
