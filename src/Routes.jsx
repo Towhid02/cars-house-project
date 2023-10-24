@@ -56,7 +56,7 @@ import AddCarts from "./Pages/AddCarts";
         },
         {
             path: "/addCarts",
-            element: <AddCarts></AddCarts>,
+            element: <PrivateRoutes><AddCarts></AddCarts></PrivateRoutes>,
         },
         {
             path: "/brand/:brand",
